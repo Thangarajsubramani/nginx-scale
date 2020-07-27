@@ -1,6 +1,8 @@
-# Nginx auto scale with load balancing and service discovery
+# Nginx containers auto scale with load balancing and service discovery
 
-Nginx image based on Alpine linux (6 MB) and auto scale Nginx containers with load balancing(HA) and service discovery
+Nginx image based on Alpine linux version 3.10(6MB).
+Orchestrate and Auto scale Nginx containers using docker-compose.
+Provide High availability(HA) with load balancing and service discovery using (HAproxy)
 
 ## Prerequisites
 
