@@ -14,4 +14,4 @@ Nginx image based on Alpine linux (6 MB) and auto scale Nginx containers with lo
 
 ## Scale
 
-   docker-compose scale web=5
+    docker-compose scale web=5
