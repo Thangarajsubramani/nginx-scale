@@ -8,9 +8,6 @@ RUN apk --no-cache add php7 php7-fpm php7-opcache php7-mysqli php7-json php7-ope
 # Install packages
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer
 
-
-RUN whoami
-
 # Configure nginx
 COPY config/nginx.conf /etc/nginx/nginx.conf
 
