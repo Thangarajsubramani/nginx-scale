@@ -1,4 +1,4 @@
-version: "3.7"
+version: "2.4"
 
 services:
   web:
@@ -6,8 +6,12 @@ services:
     networks:
       - nginx-web
     restart: always
+    hostname: nginx
     volumes:
-      - ./site:/usr/share/nginx/html
+      - ./src:/var/www/html
+      - /var/run/docker.sock:/var/run/docker.sock
+    mem_limit: 50m
+    mem_reservation: 25m
   lb:
     image: dockercloud/haproxy
     links:
@@ -18,6 +22,8 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
     networks:
       - nginx-web
+    mem_limit: 50m
+    mem_reservation: 25m
 
 networks:
   nginx-web:
